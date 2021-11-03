@@ -259,6 +259,7 @@ High-performance, non-blocking architecture for the next generation of messaging
   * Asynchronous mirroring for disaster recovery
   * Data Driven Load Balance
 
+![Kafka Architecture](https://cdn.confluent.io/wp-content/uploads/Screenshot-2017-07-19-19.14.28-1024x626.png)
 
 ### Apache RocketMQ (passes)
 Apache RocketMQ is a unified messaging engine, lightweight data processing platform.
