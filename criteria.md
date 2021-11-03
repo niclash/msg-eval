@@ -147,34 +147,104 @@ If running in a Kubernetes environment, this might be a moot point.
   * Scale Out?
 
 ### Integration
-#### MQTT - Mosquitto
-#### Apache Flink
-#### Apache Spark
-#### Apache Hadoop
-  
+Obviously we can create applications that uses the messaging system, but sometimes it is better to
+use off-the-shelf solution to integrate with other systems and not having to worry about messaging details
+and instead focus on the business values.
 
+The more integrations that are available, relevant to the business, the more interesting the messaging system
+becomes.
+
+#### MQTT - Mosquitto
+MQTT is a light-weight messaging protocol, typically used for communicating sensor/actuator data in a M2M manner.
+Mosquitto is one of the most popular and robust open source solutions, and it would be beneficial if we 
+get the integration without coding.
+
+#### PLCs  
+PLCs (Programmable Logic Controllers) are automation devices that connects to the real world, to sensors, actuators,
+valves and so forth. We anticipate that there might be a need to be able to interface with PLCs.
+
+There are many legacy protocols in this space, although some are more prevalent than others.
+It would be beneficial if we can configure the messaging system to send data to and receive data from such PLCs
+without having to learn these protocols and cater for all the perculiarities that are associated with them.
+
+#### Apache Flink
+Flink is a stream processing platform, almost like Amazon Lambda. A topology is defined in a declarative fashion, 
+which is then uploaded to Flink that executes the topology on available hardware resources at quite incredible 
+scales. Programming model might not be ideal, handling deployment becomes a joy.
+
+#### Apache Spark
+Spark is similar to Flink, but uses a "batch model" combined with "real-time"-ish data. Flink supports the 
+batch model, called "windowing", for streams but Spark is more suitable when other batch data algorithms are
+combined with stream processing.
+
+#### Apache Hadoop
+Hadoop is, as most people know, a batch processing platform. If the messaging system has support for Hadoop/HDFS
+sources/destinations then that could very well be beneficial for various reasons.
 
 ### Security
-  ACLs
-  Roles
-  Groups
-  (Sub)Topic protection
-  
+Some of the data might be critical to functional society and security must not be taken lightly. We want to see
+the messaging system has built-in support for;
+  * ACLs
+  * Roles
+  * Groups
+  * (Sub)Topic protection
+
+And if any of these are missing, then we need to look at the specifics in great detail of what may be acceptable.
+
 ### Monitoring
-  JMX
-  SNMP
-  Web UIs
+Operations need to have good overview of the running applications and the platforms involved. The messaging system
+should preferably integrate into existing monitoring solution (TBD what that is). At minimum, we need;
+  * JMX (if Java app)
+  * SNMP (if not Java app)
+  * Web UIs (for details to humans)
   
 
 ### Operations / Run books
-  Daily Maintenance
-  Weekly Maintenance
-  Software Upgrades
-  Machine Upgrades
-  
+Once a system is running in production, we need to take care of it. We will look at common run book operations each
+of the system will require, how easy/hard it is to do software and hardware upgrades and other maintenance tasks.
+  * Daily Maintenance (preferably none)
+  * Weekly Maintenance (if any)
+  * Maintenance triggered by alerts
+  * Software Upgrades
+  * Machine Upgrades
 
-### Messaging systems to evaluate
-  * Kafka
+#### Disaster Recovery
+We will try to look into worst-case scenarios and how Disaster Recovery procedures may look like.
+
+  
+## Preliminary Round
+The following systems have been identified through personal experience and Google Search. So let's get their own
+pitches and then we will filter out those that don't fulfill the __Unconditionals__ above
   * RabbitMQ
-  * ActiveMQ
-  * RocketMQ
+  * Apache Kafka
+  * Apache ActiveMQ
+  * Apache RocketMQ
+  * Celery
+  * NSQ
+  * Redisson
+  * NATS
+  * KubeMQ
+
+### RabbitMQ (passes)
+
+### Apache Kafka  (passes)
+### Apache ActiveMQ Artemis (passes)
+ActiveMQ Artemis is the "next generation" of ActiveMQ, and will eventually replace "Classic".
+
+High-performance, non-blocking architecture for the next generation of messaging applications.
+
+  * JMS 1.1 & 2.0 + Jakarta Messaging 2.0 & 3.0 with full client implementations including JNDI
+  * High availability using shared storage or network replication
+  * Simple & powerful protocol agnostic addressing model
+  * Flexible clustering for distributing load
+  * Advanced journal implementations for low-latency persistence as well as JDBC
+  * High feature parity with ActiveMQ "Classic" to ease migration
+  * Asynchronous mirroring for disaster recovery
+  * Data Driven Load Balance
+
+### Apache RocketMQ (passes)
+### Celery (don't pass)
+### NSQ (don't pass)
+### Redisson (don't pass)
+### NATS (passes)
+### KubeMQ (don't pass)
