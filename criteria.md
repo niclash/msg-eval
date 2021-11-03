@@ -55,6 +55,11 @@ is offered by default, which simplifies things a lot for less experienced Java d
 Things being considered are not only how the "happy path" is accessed, but what programmers need to do
 when something goes wrong, such as reconnects, posting to deadletter queues, et cetera.
 
+### Documentation / Resources
+All open source projects gets a lot of documentation critique. Either there is not enough documentation,
+too much documentation or not the right documentation. We will try to evaluate the current situation in
+the systems being evaluated.
+
 ### Architecture 
 Under Architecture, we are going to look at the overall philosophy, design priorities and compromises made
 in each system.
@@ -225,9 +230,21 @@ pitches and then we will filter out those that don't fulfill the __Unconditional
   * NATS
   * KubeMQ
 
+All product descriptions in the following sections are picked from the projects and
+have not be validated.
+  
 ### RabbitMQ (passes)
+RabbitMQ is the most widely deployed open source message broker.
+
+With tens of thousands of users, RabbitMQ is one of the most popular open source message brokers. From T-Mobile to Runtastic, RabbitMQ is used worldwide at small startups and large enterprises.
+
+RabbitMQ is lightweight and easy to deploy on premises and in the cloud. It supports multiple messaging protocols. RabbitMQ can be deployed in distributed and federated configurations to meet high-scale, high-availability requirements.
 
 ### Apache Kafka  (passes)
+More than 80% of all Fortune 100 companies trust, and use Kafka.
+
+Apache Kafka is an open-source distributed event streaming platform used by thousands of companies for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications."
+
 ### Apache ActiveMQ Artemis (passes)
 ActiveMQ Artemis is the "next generation" of ActiveMQ, and will eventually replace "Classic".
 
@@ -242,9 +259,61 @@ High-performance, non-blocking architecture for the next generation of messaging
   * Asynchronous mirroring for disaster recovery
   * Data Driven Load Balance
 
+
 ### Apache RocketMQ (passes)
+Apache RocketMQ is a unified messaging engine, lightweight data processing platform.
+
+![RocketMQ Architecture](https://rocketmq.apache.org/assets/images/rmq-basic-arc.png)
+
 ### Celery (don't pass)
-### NSQ (don't pass)
+Celery is a simple, flexible, and reliable distributed system to process vast amounts 
+of messages, while providing operations with the tools required to maintain such a system.
+It’s a task queue with focus on real-time processing, while also supporting task scheduling.
+
+Rejected; It is an application on top of messaging systems and has a very specific focus
+which we may or may not need. But we can always come back after selecting messaging system
+as it seems to support most.
+
+### NSQ (passes)
+A realtime distributed messaging platform.
+  * Distributed - NSQ promotes distributed and decentralized topologies without single points of failure, enabling fault tolerance and high availability coupled with a reliable message delivery guarantee. See features & guarantees.
+
+  * Scalable - NSQ scales horizontally, without any centralized brokers. Built-in discovery simplifies the addition of nodes to the cluster. Supports both pub-sub and load-balanced message delivery. It’s fast, too.
+
+  * Ops Friendly - NSQ is easy to configure and deploy and comes bundled with an admin UI. Binaries have no runtime dependencies and we provide pre-compiled releases for linux, darwin, freebsd and windows as well as an official Docker image.
+
+  * Integrated - Official Go and Python libraries are available as well as many community supported libraries for most major languages (see client libraries). If you’re interested in building your own, there’s a protocol spec.
+
 ### Redisson (don't pass)
+(no slogan, self-promote found. So my own words.)
+Redisson is a Java client for Redis and has built-in distributed data structures, incl queues.
+
+Rejected; Security reasons.
+
 ### NATS (passes)
+Connective Technology for Adaptive Edge & Distributed Systems
+
+
+  * Agile - With flexible deployments models using clusters, superclusters, and leaf nodes, optimize communications for your unique deployment. The NATS Adaptive Edge Architecture allows for a perfect fit for unique needs to connect devices, edge, cloud or hybrid deployments.
+
+  * Secure - With true multi-tenancy, securely isolate and share your data to fully meet your business needs, mitigating risk and achieving faster time to value. Security is bifurcated from topology, so you can connect anywhere in a deployment and NATS will do the right thing.
+  
+  * Performant - With the ability to process millions of messages a second per server, you’ll find unparalleled efficiency with NATS. Save money by minimizing cloud costs with reduced compute and network usage for streams, services, and eventing.
+  
+  * Resilient - NATS self-heals and can scale up, down, or handle topology changes anytime with zero downtime to your system. Clients require zero awareness of NATS topology allowing you future proof your system to meet your needs of today and tomorrow.
+  
+
 ### KubeMQ (don't pass)
+An Open-Source, Kubernetes-Native Messaging Platform
+
+A message broker and message queue ideal for developers. Provides all messaging 
+patterns, scalable, highly available, and secure. Connect microservices instantly 
+using a rich set of connectors without writing any code. Easy-to-use SDKs and 
+elimination of predefined topics, channels, brokers, and routes.
+
+![KubeMQ Architecture](https://kubemq.io/wp-content/uploads/2020/08/kubemq_diagram_1100w_nomargin.png)
+
+Rejected; KubeMQ is with a Freemium model, and that typically means that enterprise needs
+(such as production monitoring, how many instances, ++) will require a paid-for license and 
+all source is not available.
+
