@@ -26,29 +26,31 @@ Model               | Brokers            | Brokers            |                 
 Stand-Alone         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: 
 Scale Out           | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: |                    |
 Pub/Sub model       |                    |                    |                    |                    |                    |                    
-Persistence         |                    |                    |                    |                    |                    |                    
-State model         |                    |                    |                    |                    |                    |                    
+Persistence         | File               | RDBMS              |                    | File               |                    |                    
+State model         | SQL-like           |                    |                    |                    |                    |                    
 CAP Theorem         | AP                 |                    |                    |                    |                    |                    
-Stream Processing   |                    |                    |                    |                    |                    |                    
-Consumer Groups     |                    |                    |                    |                    |                    |                    
+Stream Processing   | :heavy_check_mark: |                    |                    |                    |                    |                    
+Consumer Groups     | :heavy_check_mark: |                    |                    |                    |                    |                    
 Producers           |                    |                    |                    |                    |                    |                    
-Cloud Native        |                    |                    |                    |                    |                    |                    
+Cloud Native        | :x:                | :x:                |                    |                    |                    |                    
 
 
 Data formats        | Kafka              | RabbitMQ           | NATS               | RocketMQ           | ActiveMQ           | NSQ                
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------
-Native types        |                    |                    |                    |                    |                    |                    
-Composite types     |                    |                    |                    |                    |                    |                    
-JSON built-in       |                    |                    |                    |                    |                    |                    
+Native types        | :heavy_check_mark: |                    |                    |                    |                    |                    
+Composite types     | :heavy_check_mark: |                    |                    |                    |                    |                    
+JSON built-in       | :heavy_check_mark: |                    |                    |                    |                    |                    
 XML built-in        |                    |                    |                    |                    |                    |                    
 
 Reliability         | Kafka              | RabbitMQ           | NATS               | RocketMQ           | ActiveMQ           | NSQ                
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------
-                    |                    |                    |                    |                    |                    
+At-least-once       | :heavy_check_mark: |                    |                    |                    |                    
+Idempotent support  | Headers, Keys      |                    |                    |                    |                    
+Indepentent         | No, Zookeeper:one: |                    |                    |                    |                    
 
 Robustness          | Kafka              | RabbitMQ           | NATS               | RocketMQ           | ActiveMQ           | NSQ                
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------
-System-Fault Tolerant|                   |                    |                    |                    |                    |                    
+System-Fault Tolerant|:heavy_check_mark: |                    |                    |                    |                    |                    
 Software Upgrades   |                    |                    |                    |                    |                    |                    
 Hardware Upgrades   |                    |                    |                    |                    |                    |                    
 
@@ -91,3 +93,11 @@ Software Upgrades   |                    |                    |                 
 Machine Upgrades    |                    |                    |                    |                    |                    |                    
 Contingency Testing |                    |                    |                    |                    |                    |                    
 Disaster Recovery   |                    |                    |                    |                    |                    |                    
+
+## Notes
+:one: Zookeeper is being phased out and soon no longer needed. A fully HA Zookeeper needs 5 instances, although a 3 instances compromise could be suitable if only running Kafka with Zookeeper.
+
+:two:
+
+:three:
+
