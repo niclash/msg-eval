@@ -1,5 +1,14 @@
 
-               | Kafka              | RabbitMQ           | NATS               | RocketMQ           | ActiveMQ           | NSQ                
+First Header | Second Header
+------------ | -------------
+Content cell 1 | Content cell 2
+Content column 1 | Content column 2
+
+
+
+
+
+Aspect         | Kafka              | RabbitMQ           | NATS               | RocketMQ           | ActiveMQ           | NSQ                
 ---------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 Community      | Apache             | Pivotal            | Synadia Communic.  | Apache             | Apache             | Github
 License        | ALv2               | MPL                | ALv2               | ALv2               | ALv2               | MIT
