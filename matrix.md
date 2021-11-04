@@ -10,7 +10,7 @@ Support             | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mar
 Languages           | Kafka              | RabbitMQ           | NATS               | RocketMQ           | ActiveMQ           | NSQ                
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 Primary             | Scala              | Erlang             | Go                 | Java               | Java               | Go
-Supported           |                    |                    |                    |                    |                    |
+Supported           | Java,Go,C/C++,.NET,Python:two: |                    |                    |                    |                    |
 Other               |                    |                    |                    |                    |                    |
                     
 Resources           | Kafka              | RabbitMQ           | NATS               | RocketMQ           | ActiveMQ           | NSQ                
@@ -97,7 +97,7 @@ Disaster Recovery   |                    |                    |                 
 ## Notes
 :one: Zookeeper is being phased out and soon no longer needed. A fully HA Zookeeper needs 5 instances, although a 3 instances compromise could be suitable if only running Kafka with Zookeeper.
 
-:two:
+:two: The border between Apache community and Confluent (the main commercial backer) is quite vague. The Apache community is listed in Maven Central for Java and Scala clients. The others have their GitHub repositories not under Apache.
 
 :three:
 
