@@ -8,7 +8,7 @@ Content column 1 | Content column 2
 
 
 
-Aspect         | Kafka              | RabbitMQ           | NATS               | RocketMQ           | ActiveMQ           | NSQ                
+Requirement    | Kafka              | RabbitMQ           | NATS               | RocketMQ           | ActiveMQ           | NSQ                
 ---------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 Community      | Apache             | Pivotal            | Synadia Communic.  | Apache             | Apache             | Github
 License        | ALv2               | MPL                | ALv2               | ALv2               | ALv2               | MIT
