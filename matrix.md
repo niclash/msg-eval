@@ -8,7 +8,7 @@ License        | ALv2               | MPL                | ALv2               | 
 Support        | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: 
 Stand-Alone    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: 
 Scale Out      | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: |                    |
----------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------
+.              |                    |                    |                    |                    |                    |
 Language       | Scala              | Erlang             | Go                 | Java               | Java               |
 Other Languages|                    |                    |                    |                    |                    |
                |                    |                    |                    |                    |                    |
