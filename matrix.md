@@ -1,7 +1,7 @@
 
 ## Unconditionals
 
-.                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
+|                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 Community           | Apache             |                    | Linux Foundation   | Apache             | Apache             
 License             | ALv2               | MPL                | ALv2               | ALv2               | ALv2               
