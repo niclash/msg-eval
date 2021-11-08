@@ -263,10 +263,11 @@ High-performance, non-blocking architecture for the next generation of messaging
 
 ![Kafka Architecture](https://cdn.confluent.io/wp-content/uploads/Screenshot-2017-07-19-19.14.28-1024x626.png)
 
-### Apache RocketMQ (passes)
-Apache RocketMQ is a unified messaging engine, lightweight data processing platform.
+### Apache Pulsar (passes)
+Apache Pulsar is a cloud-native, distributed messaging and streaming platform originally created at Yahoo! 
+and now a top-level Apache Software Foundation project
 
-![RocketMQ Architecture](https://rocketmq.apache.org/assets/images/rmq-basic-arc.png)
+![Pulsar Architecture](https://pulsar.apache.org/docs/assets/pulsar-system-architecture.png)
 
 ### Celery (don't pass)
 Celery is a simple, flexible, and reliable distributed system to process vast amounts 
