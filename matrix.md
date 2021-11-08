@@ -12,7 +12,7 @@ Operating System    | All JVM            | All ErlangVM       | Linux, Windows, 
 ---
 ## Languages
 
-                    | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
+|                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 Primary             | Scala              | Erlang             | Go                 | Java               | Java               
 Supported           | Java,Go,C/C++,.NET,Python:two: |                    | Java, NodeJS, Scala, Python, Ruby |                    |
@@ -23,7 +23,7 @@ Client API          | Kafka, Kafka Streams | Rabbit, JMS      | NATS            
 
 ## Resources
 
-                    | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
+|                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 Easy-to-use API     | :bulb::bulb::bulb: | :bulb::bulb::bulb: | :bulb:             | :bulb::bulb::bulb: | :bulb::bulb::bulb:                   
 Documentation       | :bulb::bulb::bulb: |                    | :bulb:             | :bulb::bulb::bulb: | :bulb::bulb::bulb: 
@@ -34,7 +34,7 @@ Public References   | https://kafka.apache.org/powered-by | T-Mobile, ++ | Cloud
 ---
 ## Architecture
 
-                    | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
+|                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 Model               | Brokers            | Brokers            | Brokers            | Brokers            | Brokers            
 CAP Theorem         | AP                 |                    | AP                 |                    |                    
@@ -59,7 +59,7 @@ Link to Doc         |                    |                    |                 
 
 ## Data Formats
 
-                    | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
+|                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 Native types        | :heavy_check_mark: |                    |                    |                    |                    
 Composite types     | :heavy_check_mark: |                    |                    |                    |                    
@@ -70,7 +70,7 @@ XML built-in        |                    |                    |                 
 
 ## Robustness
 
-                    | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
+|                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 System-Fault Tolerant|:heavy_check_mark: |                    |                    |                    |                    
 Jepsen              | [[:bookmark_tabs:](https://aphyr.com/posts/293-call-me-maybe-kafka) | [:bookmark_tabs:](https://aphyr.com/posts/315-call-me-maybe-rabbitmq) | | | 
@@ -80,7 +80,7 @@ Jepsen for Zookeeper | [:bookmark_tabs:](https://aphyr.com/posts/291-call-me-may
 
 ## Performance
 
-                    | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
+|                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 Msg/sec :tre:       | 800,000            | 15,000             | 2,000,000          |               :six:|  25,000            
 Max Latency :tre:   | 1,000 ms :five:    | 5,000 ms :four:    | 0.3ms              | ~5 ms         :six:|                    
@@ -92,7 +92,7 @@ Max MB/Queue        | :question:         |                    |                 
 
 ## Integration
 
-                    | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
+|                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 MQTT                | :heavy_check_mark: |                    |                    |                    |                    
 PLCs                | :heavy_check_mark: |                    |                    |                    |                    
@@ -104,7 +104,7 @@ Apache Hadoop       | :heavy_check_mark: |                    |                 
 
 ## Security
 
-                    | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
+|                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 Topic/Queue ACLs    | :heavy_check_mark: |                    |                    |                    |                    
 Roles               | :heavy_check_mark: |                    |                    |                    |                    
@@ -115,7 +115,8 @@ Storage Encryption  | :question:         |                    |                 
 ---
 
 ## Monitoring
-                    | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
+
+|                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 JMX                 | :heavy_check_mark: |                    |                    |                    |                    
 SNMP                | :x:                |                    |                    |                    |                    
@@ -126,7 +127,7 @@ Custom Alerts       | :question:         |                    |                 
 
 ## Operations
 
-                    | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
+|                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 Installation        | :thumbsdown: | :thumbsdown::thumbsdown::thumbsdown: | | :thumbsdown::thumbsdown: | :thumbsdown::thumbsdown::thumbsdown:
 Daily Maintenance   | None               |                    |                    | None               |                    
