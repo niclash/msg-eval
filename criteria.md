@@ -116,9 +116,9 @@ come from hardware breaking down, doing the wrong thing or network packets being
 failures are planned, such as machine/host replacements, software upgrades and contingency planning/testing.
 
 Jepsen relevant reports.
-  * https://aphyr.com/posts/293-call-me-maybe-kafka
-  * https://aphyr.com/posts/315-call-me-maybe-rabbitmq
-  * https://aphyr.com/posts/291-call-me-maybe-zookeeper
+  * 
+  * 
+  * 
 
 
 #### System Fault Tolerance (SFT)
@@ -225,7 +225,7 @@ pitches and then we will filter out those that don't fulfill the __Unconditional
   * RabbitMQ
   * Apache Kafka
   * Apache ActiveMQ
-  * Apache RocketMQ
+  * Apache Pulsar
   * Celery
   * NSQ
   * Redisson
@@ -278,7 +278,7 @@ Rejected; It is an application on top of messaging systems and has a very specif
 which we may or may not need. But we can always come back after selecting messaging system
 as it seems to support most.
 
-### NSQ (passes)
+### NSQ (doesn't pass)
 A realtime distributed messaging platform.
   * Distributed - NSQ promotes distributed and decentralized topologies without single points of failure, enabling fault tolerance and high availability coupled with a reliable message delivery guarantee. See features & guarantees.
 
@@ -288,7 +288,9 @@ A realtime distributed messaging platform.
 
   * Integrated - Official Go and Python libraries are available as well as many community supported libraries for most major languages (see client libraries). If you’re interested in building your own, there’s a protocol spec.
 
-### Redisson (don't pass)
+Rejected: Seemingly no commercial support available
+  
+### Redisson (doesn't pass)
 (no slogan, self-promote found. So my own words.)
 Redisson is a Java client for Redis and has built-in distributed data structures, incl queues.
 
@@ -306,8 +308,9 @@ Connective Technology for Adaptive Edge & Distributed Systems
   
   * Resilient - NATS self-heals and can scale up, down, or handle topology changes anytime with zero downtime to your system. Clients require zero awareness of NATS topology allowing you future proof your system to meet your needs of today and tomorrow.
   
+NOTE: During compilation of NATS features and performance, it came to the forefront that it is a "At-Most-Once" system, i.e. handing over a message to a broker doesn't guarantee that consumers will get the messsage, due to lacking persistence system. This is probably also the reason that performance is quite outstanding. So, we are not completing the matrix for NATS for now, until we come across a usecase where that limitations is not of importance and speed is paramount. I also don't think that it is possible to plug Persistence into it, except modifying source code, and that is beyond our scope.  
 
-### KubeMQ (don't pass)
+### KubeMQ (doesn't pass)
 An Open-Source, Kubernetes-Native Messaging Platform
 
 A message broker and message queue ideal for developers. Provides all messaging 
