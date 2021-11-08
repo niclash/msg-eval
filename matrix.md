@@ -7,7 +7,7 @@ Community           | Apache             |                    | Linux Foundation
 License             | ALv2               | MPL                | ALv2               | ALv2               | ALv2               
 Community Support   | :bulb::bulb::bulb: | :bulb::bulb::bulb: | :bulb::bulb:       | :bulb::bulb:       | :bulb::bulb:       
 Commercial Support  | :heavy_check_mark: Confluent | :heavy_check_mark: VMware | :heavy_check_mark: Synadia Communic. |  | :heavy_check_mark: RedHat, ++ 
-Operating System    | All JVM            | All ErlangVM       | Linux, Windows, Mac | All JVM           } All JVM            
+Operating System    | All JVM            | All ErlangVM       | Linux, Windows, Mac | All JVM           | All JVM            
 
 Languages           | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
@@ -18,10 +18,10 @@ Client API          | Kafka, Kafka Streams | Rabbit, JMS      | NATS            
 
 Resources           | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
-Easy-to-use API     | :bulb::bulb::bulb: | :bulb::bulb::bulb: | :bulb:             |                    | :bulb::bulb::bulb:                   
-Documentation       | :bulb::bulb::bulb: |                    | :bulb:             |                    | :bulb::bulb::bulb: 
+Easy-to-use API     | :bulb::bulb::bulb: | :bulb::bulb::bulb: | :bulb:             | :bulb::bulb::bulb: | :bulb::bulb::bulb:                   
+Documentation       | :bulb::bulb::bulb: |                    | :bulb:             | :bulb::bulb::bulb: | :bulb::bulb::bulb: 
 Tutorials           | :bulb::bulb::bulb: |                    | :bulb:             |                    |                    
-YouTube             | :bulb::bulb::bulb: |                    | :bulb::bulb:       |                    |                    
+YouTube             | :bulb::bulb::bulb: |                    | :bulb::bulb:       | :bulb:             |                    
 Public References   | https://kafka.apache.org/powered-by | T-Mobile, ++ | CloudFoundry  | Yahoo  |                    |
                     
 Architecture        | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
@@ -37,7 +37,7 @@ Distrbuted Queues   | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mar
 Auto-create Queues  | :heavy_check_mark: |                    |                    |                    |                    
 Temporary Queues    | :x:                |                    |                    |                    |                    
 Request/Reply       | :x:                | :x:                | :heavy_check_mark: |                    | :x:                
-Idempotent support  | Headers & Keys     |                    |                    |                    |                    
+Idempotent support  | Headers & Keys     | Headers & Keys     |                    |                    |                    
 Persistence         | File               | RDBMS              | :x:                | File               |                    
 State model         | SQL-like           |                    |                    | SQL-like (external Presto needed)  |                    
 Light-weight        | :x:                | :x:                | :heavy_check_mark: | :x:                | :x:                                  
@@ -89,7 +89,7 @@ Monitoring          | Kafka              | RabbitMQ           | NATS            
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 JMX                 | :heavy_check_mark: |                    |                    |                    |                    
 SNMP                | :x:                |                    |                    |                    |                    
-Web UI              | Kowl               |                    |                    |                    |                    
+Web UI              | Kowl               | :heavy_check_mark: |                    |                    |                    
 Custom Alerts       | :question:         |                    |                    |                    |                    
 
 Operations          | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
