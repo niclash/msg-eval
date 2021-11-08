@@ -9,12 +9,16 @@ Community Support   | :bulb::bulb::bulb: | :bulb::bulb::bulb: | :bulb::bulb:    
 Commercial Support  | :heavy_check_mark: Confluent | :heavy_check_mark: VMware | :heavy_check_mark: Synadia Communic. |  | :heavy_check_mark: RedHat, ++ 
 Operating System    | All JVM            | All ErlangVM       | Linux, Windows, Mac | All JVM           | All JVM            
 
+---
+
 Languages           | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 Primary             | Scala              | Erlang             | Go                 | Java               | Java               
 Supported           | Java,Go,C/C++,.NET,Python:two: |                    | Java, NodeJS, Scala, Python, Ruby |                    |
 Other               |                    |                    |                    |                    |                    
 Client API          | Kafka, Kafka Streams | Rabbit, JMS      | NATS               | Pulsar             | JMS, ?
+
+---
 
 Resources           | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
@@ -23,7 +27,9 @@ Documentation       | :bulb::bulb::bulb: |                    | :bulb:          
 Tutorials           | :bulb::bulb::bulb: |                    | :bulb:             |                    |                    
 YouTube             | :bulb::bulb::bulb: |                    | :bulb::bulb:       | :bulb:             |                    
 Public References   | https://kafka.apache.org/powered-by | T-Mobile, ++ | CloudFoundry  | Yahoo  |                    |
-                    
+
+---
+
 Architecture        | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 Model               | Brokers            | Brokers            | Brokers            | Brokers            | Brokers            
@@ -45,6 +51,8 @@ Independent         | No, Zookeeper:one: |                    | :heavy_check_mar
 Cloud Native        | :x:                | :x:                |                    |                    |                    
 Link to Doc         |                    |                    |                    | [:bookmark_tabs:](https://pulsar.apache.org/docs/en/concepts-architecture-overview) |
 
+---
+
 Data formats        | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 Native types        | :heavy_check_mark: |                    |                    |                    |                    
@@ -52,14 +60,15 @@ Composite types     | :heavy_check_mark: |                    |                 
 JSON built-in       | :heavy_check_mark: |                    |                    |                    |                    
 XML built-in        |                    |                    |                    |                    |                    
 
-Reliability         | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
---------------------|--------------------|--------------------|--------------------|--------------------|--------------------
+---
 
 Robustness          | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 System-Fault Tolerant|:heavy_check_mark: |                    |                    |                    |                    
 Jepsen              | [[:bookmark_tabs:](https://aphyr.com/posts/293-call-me-maybe-kafka) | [:bookmark_tabs:](https://aphyr.com/posts/315-call-me-maybe-rabbitmq) | | | 
 Jepsen for Zookeeper | [:bookmark_tabs:](https://aphyr.com/posts/291-call-me-maybe-zookeeper) | | | [:bookmark_tabs:](https://aphyr.com/posts/291-call-me-maybe-zookeeper) |
+
+---
 
 Performance         | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
@@ -69,6 +78,8 @@ Max Topics/Queues   | 10s of thousands   |                    |                 
 Max Messages/Queue  | billions           |                    |                    |                    |                    
 Max MB/Queue        | :question:         |                    |                    |                    |                    
 
+---
+
 Integration         | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 MQTT                | :heavy_check_mark: |                    |                    |                    |                    
@@ -76,6 +87,8 @@ PLCs                | :heavy_check_mark: |                    |                 
 Apache Flink        | :heavy_check_mark: |                    |                    |                    |                    
 Apache Spark        | :heavy_check_mark: |                    |                    |                    |                    
 Apache Hadoop       | :heavy_check_mark: |                    |                    |                    |                    
+
+---
 
 Security            | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
@@ -85,12 +98,16 @@ Groups              | :heavy_check_mark: |                    |                 
 Network Encryption  | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: |                    
 Storage Encryption  | :question:         |                    |                    |                    |                    
 
+---
+
 Monitoring          | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 JMX                 | :heavy_check_mark: |                    |                    |                    |                    
 SNMP                | :x:                |                    |                    |                    |                    
 Web UI              | Kowl               | :heavy_check_mark: |                    |                    |                    
 Custom Alerts       | :question:         |                    |                    |                    |                    
+
+---
 
 Operations          | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
@@ -101,6 +118,8 @@ Software Upgrades   | :heavy_check_mark: |                    |                 
 Machine Upgrades    | :heavy_check_mark: |                    |                    |                    |                    
 Contingency Testing | :x:                |                    |                    |                    |                    
 Disaster Recovery   | :x:                |                    |                    |                    |                    
+
+---
 
 ## Notes
 :one: Zookeeper is being phased out and soon no longer needed. A fully HA Zookeeper needs 5 instances, although a 3 instances compromise could be suitable if only running Kafka with Zookeeper.
