@@ -193,6 +193,8 @@ the messaging system has built-in support for;
   * Roles
   * Groups
   * (Sub)Topic protection
+  * Network encryption
+  * Storage encryption
 
 And if any of these are missing, then we need to look at the specifics in great detail of what may be acceptable.
 
