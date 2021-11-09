@@ -82,8 +82,8 @@ Jepsen for Zookeeper | [:bookmark_tabs:](https://aphyr.com/posts/291-call-me-may
 
 |                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
-Msg/sec :tre:       | 800,000            | 15,000             | 2,000,000          |               :six:|  25,000            
-Max Latency :tre:   | 1,000 ms :five:    | 5,000 ms :four:    | 0.3ms              | ~5 ms         :six:|                    
+Msg/sec :three:       | 800,000            | 15,000             | 2,000,000          |               :six:|  25,000            
+Max Latency :three:   | 1,000 ms :five:    | 5,000 ms :four:    | 0.3ms              | ~5 ms         :six:|                    
 Max Topics/Queues   | 10s of thousands   |                    |                    |               :six:|                    
 Max Messages/Queue  | billions           |                    |                    |                    |                    
 Max MB/Queue        | :question:         |                    |                    |                    |                    
