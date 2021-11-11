@@ -16,6 +16,8 @@ If proven track record and market recognition is needed, then we should go with 
 Notable Features of Pulsar
   * Both traditional messaging as well as stream processing supported.
   * Easier software upgrades and rescaling.
-  * Pulsar Functions, similar to Amazon Lamdba
+  * Pulsar Functions, similar to Amazon Lamdba. Deployable in many ways, incl Kubernetes.
   * Integration with a lot of systems, incl MQTT.
-  * Multi-Tenancy, each Tenant with multiple namespaces
+  * Multi-Tenancy, each Tenant with multiple namespaces.
+  * Support for strict schemas, or client-specific implementations.
+  
