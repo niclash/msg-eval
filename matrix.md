@@ -43,13 +43,13 @@ Exactly-Once        | :x:                | :x:                | :x:             
 Scale Out           | :heavy_check_mark: | :question:         | :heavy_check_mark: | :heavy_check_mark: |
 Pub/Sub             | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: 
 Distrbuted Queues   | :heavy_check_mark: | :x:                | :heavy_check_mark: | :heavy_check_mark: |
-Auto-create Queues  | :heavy_check_mark: | :heavy_check_mark: |                    |                    | :heavy_check_mark: 
-Temporary Queues    | :x:                | :heavy_check_mark: |                    |                    | :heavy_check_mark::question:
-Request/Reply       | :x:                | :x:                | :heavy_check_mark: |                    | :x:
-Idempotent support  | Headers & Keys     | Headers & Keys     |                    |                    |
+Auto-create Queues  | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: 
+Temporary Queues    | :x:                | :heavy_check_mark: |                    | :question:         | :heavy_check_mark::question:
+Request/Reply       | :x:                | :x:                | :heavy_check_mark: | :x:                | :x:
+Idempotent support  | Headers & Keys     | Headers & Keys     |                    | Auto-Dedup         |
 Message Retention   | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: |
 Persistence         | File               | JDBC               | :x:                | File               | File (KahaDB) / JDBC
-Message Ordering    | In partition only  | :heavy_check_mark: |                    |                    | 
+Message Ordering    | In partition only  | :heavy_check_mark: |                    | :heavy_check_mark: | 
 State model         | SQL-like, Windowing| :x: (external)     |                    | SQL-like (external Presto needed)  | :x:
 Light-weight        | :x:                | :x:                | :heavy_check_mark: | :x:                | :x:
 Independent         | No, Zookeeper:one: | No, if persistence | :heavy_check_mark: | Zookeeper, BookKeeper |
@@ -70,7 +70,7 @@ Composite types     | client-responsible |                    |                 
 
 |                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
-System-Fault Tolerant|:heavy_check_mark: |                    |                    | :heavy_check_mark: | :x:                
+System-Fault Tolerant|:heavy_check_mark: | :question:         |                    | :heavy_check_mark: | :x:                
 Jepsen              | [:bookmark_tabs:](https://aphyr.com/posts/293-call-me-maybe-kafka) | [:bookmark_tabs:](https://aphyr.com/posts/315-call-me-maybe-rabbitmq) | :x: | :x: | :x: 
 Jepsen for Zookeeper | [:bookmark_tabs:](https://aphyr.com/posts/291-call-me-maybe-zookeeper) | :x: | :x: | [:bookmark_tabs:](https://aphyr.com/posts/291-call-me-maybe-zookeeper) | :x:
 

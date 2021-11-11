@@ -21,3 +21,5 @@ Notable Features of Pulsar
   * Multi-Tenancy, each Tenant with multiple namespaces.
   * Support for strict schemas, or client-specific implementations.
   * Across-Datacenter replication built-in.
+
+It is somewhat concerning that Jepson.io has not tested Apache Pulsar, as this would dig up any issues with the system-fault tolerance and other claims. Maybe that is an expense worth pursuing?
