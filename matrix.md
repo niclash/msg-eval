@@ -5,7 +5,7 @@
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 Community           | Apache             | RedHat (?)         | Linux Foundation   | Apache             | Apache             
 License             | ALv2               | MPL                | ALv2               | ALv2               | ALv2               
-Community Support   | :bulb::bulb::bulb: | :bulb::bulb::bulb: | :bulb::bulb:       | :bulb::bulb:       | :bulb::bulb:       
+Community Support   | :bulb::bulb::bulb: | :bulb::bulb::bulb: | :bulb::bulb:       | :bulb::bulb::bulb: | :bulb::bulb:       
 Commercial Support  | :heavy_check_mark: Confluent | :heavy_check_mark: VMware | :heavy_check_mark: Synadia Communic. | StreamNative.io | :heavy_check_mark: RedHat, ++ 
 Operating System    | All JVM            | All ErlangVM       | Linux, Windows, Mac | All JVM           | All JVM            
 
