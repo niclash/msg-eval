@@ -3,7 +3,7 @@
 
 |                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
-Community           | Apache             |                    | Linux Foundation   | Apache             | Apache             
+Community           | Apache             | RedHat (?)         | Linux Foundation   | Apache             | Apache             
 License             | ALv2               | MPL                | ALv2               | ALv2               | ALv2               
 Community Support   | :bulb::bulb::bulb: | :bulb::bulb::bulb: | :bulb::bulb:       | :bulb::bulb:       | :bulb::bulb:       
 Commercial Support  | :heavy_check_mark: Confluent | :heavy_check_mark: VMware | :heavy_check_mark: Synadia Communic. | StreamNative.io | :heavy_check_mark: RedHat, ++ 
@@ -28,7 +28,7 @@ Easy-to-use API     | :bulb::bulb::bulb: | :bulb::bulb::bulb: | :bulb:          
 Documentation       | :bulb::bulb::bulb: | :bulb::bulb::bulb: | :bulb:             | :bulb::bulb::bulb: | :bulb::bulb::bulb:
 Tutorials           | :bulb::bulb:       | :bulb::bulb:       | :bulb:             | :bulb::bulb:       | :bulb::bulb::bulb:
 YouTube             | :bulb::bulb::bulb: | :bulb::bulb::bulb: | :bulb::bulb:       | :bulb:             | :bulb::bulb::bulb:
-Public References   | https://kafka.apache.org/powered-by | T-Mobile, ++ | CloudFoundry  | Yahoo  |                    |
+Public References   | https://kafka.apache.org/powered-by | T-Mobile, ++ | CloudFoundry  | Yahoo. TenCent, Verizon, Comcast |
 
 ---
 ## Architecture
@@ -61,10 +61,8 @@ Link to Doc         |                    |                    |                 
 
 |                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
-Native types        | :heavy_check_mark: |                    |                    |                    |                    
-Composite types     | :heavy_check_mark: |                    |                    |                    |                    
-JSON built-in       | :heavy_check_mark: |                    |                    |                    |                    
-XML built-in        |                    |                    |                    |                    |                    
+Native types        | :heavy_check_mark: |                    |                    | :heavy_check_mark: |                    
+Composite types     | client-responsible |                    |                    | avro, protobuf     |                    
 
 ---
 
@@ -82,10 +80,10 @@ Jepsen for Zookeeper | [:bookmark_tabs:](https://aphyr.com/posts/291-call-me-may
 
 |                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
-Msg/sec :three:       | 800,000            | 15,000             | 2,000,000          |               :six:|  25,000            
-Max Latency :three:   | 1,000 ms :five:    | 5,000 ms :four:    | 0.3ms              | ~5 ms         :six:|                    
-Max Topics/Queues   | 10s of thousands   |                    |                    |               :six:|                    
-Max Messages/Queue  | billions           |                    |                    |                    |                    
+Msg/sec :three:       | 800,000            | 15,000             | 2,000,000        |               :six:|  25,000            
+Max Latency :three:   | 1,000 ms :five:    | 5,000 ms :four:    | 0.3ms            | ~5 ms         :six:|                    
+Max Topics/Queues   | 10s of thousands   |                    |                    | 2.8 million/namespace :six:|                    
+Max Messages/Queue  | billions           |                    |                    | billions           |                    
 Max MB/Queue        | :question:         |                    |                    |                    |                    
 
 ---
@@ -106,9 +104,9 @@ Apache Hadoop       | :heavy_check_mark: |                    |                 
 
 |                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
-Topic/Queue ACLs    | :heavy_check_mark: |                    |                    |                    |                    
-Roles               | :heavy_check_mark: |                    |                    |                    |                    
-Groups              | :heavy_check_mark: |                    |                    |                    |                    
+Topic/Queue ACLs    | :heavy_check_mark: |                    |                    | :heavy_check_mark: |                    
+Roles               | :heavy_check_mark: |                    |                    | :question:       : |                    
+Groups              | :heavy_check_mark: |                    |                    | :heavy_check_mark: |                    
 Network Encryption  | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: |                    
 Storage Encryption  | :question:         | :question:         |                    | :heavy_check_mark: |                    
 
