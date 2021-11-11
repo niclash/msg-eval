@@ -6,7 +6,7 @@
 Community           | Apache             |                    | Linux Foundation   | Apache             | Apache             
 License             | ALv2               | MPL                | ALv2               | ALv2               | ALv2               
 Community Support   | :bulb::bulb::bulb: | :bulb::bulb::bulb: | :bulb::bulb:       | :bulb::bulb:       | :bulb::bulb:       
-Commercial Support  | :heavy_check_mark: Confluent | :heavy_check_mark: VMware | :heavy_check_mark: Synadia Communic. | :question: :eight: | :heavy_check_mark: RedHat, ++ 
+Commercial Support  | :heavy_check_mark: Confluent | :heavy_check_mark: VMware | :heavy_check_mark: Synadia Communic. | StreamNative.io | :heavy_check_mark: RedHat, ++ 
 Operating System    | All JVM            | All ErlangVM       | Linux, Windows, Mac | All JVM           | All JVM            
 
 ---
@@ -15,7 +15,7 @@ Operating System    | All JVM            | All ErlangVM       | Linux, Windows, 
 |                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 Primary             | Scala              | Erlang             | Go                 | Java               | Java               
-Supported           | Java,Go,C/C++,.NET,Python:two: | Java, .NET, Ruby, Python, JS, Rust, Go, C/C++ | Java, NodeJS, Scala, Python, Ruby |                    |
+Supported           | Java,Go,C/C++,.NET,Python:two: | Java, .NET, Ruby, Python, JS, Rust, Go, C/C++ | Java, NodeJS, Scala, Python, Ruby | Java, Go, Python, C++, C#, NodeJs, Rust, Erlang |
 Client API          | Kafka, Kafka Streams | JMS, AMQP        | NATS               | Pulsar             | JMS, AMQP, ActiveMQ
 
 ---
@@ -73,7 +73,7 @@ XML built-in        |                    |                    |                 
 |                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 System-Fault Tolerant|:heavy_check_mark: |                    |                    | :heavy_check_mark: | :x:                
-Jepsen              | [[:bookmark_tabs:](https://aphyr.com/posts/293-call-me-maybe-kafka) | [:bookmark_tabs:](https://aphyr.com/posts/315-call-me-maybe-rabbitmq) | :x: | :x: | :x: 
+Jepsen              | [:bookmark_tabs:](https://aphyr.com/posts/293-call-me-maybe-kafka) | [:bookmark_tabs:](https://aphyr.com/posts/315-call-me-maybe-rabbitmq) | :x: | :x: | :x: 
 Jepsen for Zookeeper | [:bookmark_tabs:](https://aphyr.com/posts/291-call-me-maybe-zookeeper) | :x: | :x: | [:bookmark_tabs:](https://aphyr.com/posts/291-call-me-maybe-zookeeper) | :x:
 
 ---
@@ -94,11 +94,11 @@ Max MB/Queue        | :question:         |                    |                 
 
 |                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
-MQTT                | :heavy_check_mark: | :heavy_check_mark: |                    |                    | :heavy_check_mark: 
-PLCs                | :heavy_check_mark: |                    |                    |                    |                    
-Apache Flink        | :heavy_check_mark: |                    |                    |                    |                    
-Apache Spark        | :heavy_check_mark: |                    |                    |                    |                    
-Apache Hadoop       | :heavy_check_mark: |                    |                    |                    |                    
+MQTT                | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: 
+PLCs                | :heavy_check_mark: |                    |                    | :x:                | :x:                
+Apache Flink        | :heavy_check_mark: |                    |                    | :heavy_check_mark: |                    
+Apache Spark        | :heavy_check_mark: |                    |                    | :heavy_check_mark: |                    
+Apache Hadoop       | :heavy_check_mark: |                    |                    | :heavy_check_mark: |                    
 
 ---
 
@@ -110,7 +110,7 @@ Topic/Queue ACLs    | :heavy_check_mark: |                    |                 
 Roles               | :heavy_check_mark: |                    |                    |                    |                    
 Groups              | :heavy_check_mark: |                    |                    |                    |                    
 Network Encryption  | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: |                    
-Storage Encryption  | :question:         | :question:         |                    |                    |                    
+Storage Encryption  | :question:         | :question:         |                    | :heavy_check_mark: |                    
 
 ---
 
@@ -129,9 +129,9 @@ Web UI              | Kowl               | :heavy_check_mark: |                 
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 Installation        | :thumbsdown: | :thumbsdown::thumbsdown::thumbsdown: | | :thumbsdown::thumbsdown: | :thumbsdown::thumbsdown::thumbsdown:
 Daily Maintenance   | None               |                    |                    | None               |                    
-Weekly Maintenance  | :question:         |                    |                    |                    |                    
-Software Upgrades   | :x:                | :heavy_check_mark: |                    |                    |                    
-Machine Upgrades    | :heavy_check_mark: | :heavy_check_mark: |                    |                    |                    
+Weekly Maintenance  | :question:         | :question:         |                    | :question:         |                    
+Software Upgrades   | :x:                | :heavy_check_mark: |                    | :heavy_check_mark: |                    
+Machine Upgrades    | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: |                    
 Contingency Testing | :x:                |                    |                    |                    |                    
 Disaster Recovery   | :x:                |                    |                    |                    |                    
 
@@ -152,4 +152,3 @@ Disaster Recovery   | :x:                |                    |                 
 
 :seven: RabbitMQ "Clustering Mode" is CP. RabbitMQ "Shovel" and "Federation" is AP. However the AP modes have non-desirable side effects, such as "A client connecting to any broker can only see queues in that broker." which means that clients needs to understand topology and queue routing.
 
-:eight: There is a rumor that Datastax can provide commercial support. They have Pulsar-as-a-Service, and seems to generally recommend it over Kafka, but I can't find it on their website.
