@@ -105,7 +105,7 @@ Apache Hadoop       | :heavy_check_mark: |                    |                 
 |                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
 Topic/Queue ACLs    | :heavy_check_mark: |                    |                    | :heavy_check_mark: |                    
-Roles               | :heavy_check_mark: |                    |                    | :question:       : |                    
+Roles               | :heavy_check_mark: |                    |                    | :heavy_check_mark: |                    
 Groups              | :heavy_check_mark: |                    |                    | :heavy_check_mark: |                    
 Network Encryption  | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: |                    
 Storage Encryption  | :question:         | :question:         |                    | :heavy_check_mark: |                    
@@ -116,8 +116,8 @@ Storage Encryption  | :question:         | :question:         |                 
 
 |                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
 --------------------|--------------------|--------------------|--------------------|--------------------|--------------------
-JMX                 | :heavy_check_mark: | :heavy_check_mark: |                    |                    | :heavy_check_mark: 
-Web UI              | Kowl               | :heavy_check_mark: |                    |                    | :heavy_check_mark: 
+JMX                 | :heavy_check_mark: | :heavy_check_mark: |                    | :question:         | :heavy_check_mark: 
+Web UI              | Kowl               | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: 
 
 ---
 
@@ -130,8 +130,6 @@ Daily Maintenance   | None               |                    |                 
 Weekly Maintenance  | :question:         | :question:         |                    | :question:         |                    
 Software Upgrades   | :x:                | :heavy_check_mark: |                    | :heavy_check_mark: |                    
 Machine Upgrades    | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: |                    
-Contingency Testing | :x:                |                    |                    |                    |                    
-Disaster Recovery   | :x:                |                    |                    |                    |                    
 
 ---
 
