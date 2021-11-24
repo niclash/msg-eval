@@ -3,6 +3,8 @@
 
 Apache Pulsar and Apache Kafka have quite a lot of commonality. They are both targeting high volume messaging systems, in central roles of large/critical systems. They have both simplified the abstraction (compared to AMQP implementations and IBM MQseries).
 
+Both Pulsar and Kafka is hosted by the Apache Software Foundation, and all its projects are licensed under the permissive Apache License version 2.0. This allows us to use the software in any way we see fit, not required to reciprocate in any way, and only limited in regards of trademarks (can't use the Apache trademarks as our own) and some patents restrictions.
+
 They are also both developed and supported by a large, very active and responsive community. And both have commercial support options available from commercial companies, that are strong participants in the Apache community.
 
 ## Abstraction
@@ -12,8 +14,38 @@ But Pulsar has more tricks up its sleeve, and can also be used for traditional m
 
 Neither Kafka nor Pulsar supports topic hierarchies, like those in AMQP or MQTT.
 
+## Programming Model
+Both Kafka and Pulsar have very easy to understand APIs at their core. 
+
+Kafka promotes _Kafka Streams_ as the key programming model, very similar to Java Stream API, and although very easy to understand and use, it becomes a nightmare when something goes wrong. Really hard to troubleshoot.
+
+Pulsar allows 3 tiers; 
+    1. directly reading the topic in one's own event loop, 
+    1. register a `MessageListener<T>`,
+    1. deploy _Pulsar Functions_, the serverless option similar to "AWS Lambda" and "Google Cloud Functions"
+
+The Programming Model includes Schemas (see below) which can also make programming life a lot easier.
+
+## Programming Language
+Kafka is mostly written in Scala and any work on the Kafka platform itself requires Scala skills, which is less abundant than Java skills, which is the language of Pulsar.
+
+_Pulsar Functions_ must be written in Java, but otherwise these client languages are supported by community;
+  1. Java
+  1. Go
+  1. Python
+  1. C++
+  1. C#
+  1. NodeJS
+  1. WebSockets - Any language that supports WebSockets (i.e. most) can access the core API in Pulsar.
+
+Also, the following languages are supposedly supported by third-party;
+  1. Haskell
+  1. Scala
+  1. Rust
+  1. .NET (C#/F#/VB)
+       
 ## Scale Out
-Kafka has tied the storage and partition model to each other, which makes it really difficult to change the partitioning later in the system lifecycle. It is recommended that the future max partitions are set up from the start. That is a lose-lose proposal, since on one hand it will be unnecessary with 30 (2*3*5) partitions in the beginning of any system, and might not be enough later. To change the partitions later, a re-balance is needed, and that takes both time (depending on how long detention time is, and how much storage is used) and downtime while it is happening.
+Kafka has tied the storage and partition model to each other, which makes it really difficult (rebalance leads to downtime) to change the partitioning later in the system lifecycle. It is recommended that the future max partitions are set up from the start. That is a lose-lose proposal, since on one hand it will be unnecessary with 30 (2*3*5) partitions in the beginning of any system, and might not be enough later. To change the partitions later, a re-balance is needed, and that takes both time (depending on how long detention time is, and how much storage is used) and downtime while it is happening.
 
 By contrast, Pulsar uses Apache Bookkeeper, which is a distributed ledger that takes care of redundant storage. Bookkeeper can be scaled up independently of the Pulsar _brokers_. Need faster/more storage, then scale out Bookkeeper. Need more processing power, then scale out the _brokers_.
 
@@ -72,8 +104,5 @@ Pulsar comes with a rudimentary management tool, but more importantly it support
 Kafka has a very rich eco-system of integration modules. Pulsar is lacking in this respect, but https://hub.streamnative.io/ shows a decent set, and the more important ones, like MQTT, Cassandra, Flink, Spark, HDFS/Hadoop, are available and ready to use.
 
 ## High Availability and Disaster Contingency
+Pulsar has, unlike Kafka, explicit support for cross-datacenter replication. In essence, fully replicated setup and automatic fail-over is possible to set up, but requires an additional central Zookeeper cluster that both Pulsar datacenters use. This has not been dug into and it is unclear what possibilities, requirements and limitations are associated with such a setup. The primary purpose is to be resilient to even datacenter outage.
 
-  * Integration with a lot of systems, incl MQTT.
-  * Multi-Tenancy, each Tenant with multiple namespaces.
-  * Support for strict schemas, or client-specific implementations.
-  * Across-Datacenter replication built-in.
