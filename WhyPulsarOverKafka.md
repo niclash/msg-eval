@@ -107,7 +107,7 @@ Pulsar comes with a rudimentary management tool, but more importantly it support
 ## Limitations
 Kafka slows down as the set of stored messages grow. This behavior is not present in Pulsar. And in Kafka, this escalates quickly if "rebalancing" of the brokers is required. Pulsar don't have "rebalancing" as Bookkeeper creates a distributed/resilient ledger disconnected from the Pulsar partitions, and it doesn't suffer from storage bottlenecks as data volume grows.
 
-Kafka has practical limits of "thousands of topics". Pulsar is said to be able to handle millions of topics. I also personally checked claim with people inside TenCent, one of the largest Pulsar deployments, and yes they have more topics than they care to count, including running financial transactions (WeChat Pay) over Pulsar.
+Kafka has practical limits of "thousands of topics", which may start to become a problem in large systems with a lot of entity types and messaging needs. Pulsar is said to be able to handle millions of topics. I also personally checked claim with people inside TenCent, one of the largest Pulsar deployments, and yes they have more topics than they care to count, including running financial transactions (WeChat Pay) over Pulsar.
 
 ## Integration
 Kafka has a very rich eco-system of integration modules. Pulsar is lacking in this respect, but https://hub.streamnative.io/ shows a decent set, and the more important ones, like MQTT, Cassandra, Flink, Spark, HDFS/Hadoop, are available and ready to use.
