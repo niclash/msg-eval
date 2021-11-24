@@ -1,4 +1,6 @@
 
+This matrix was a tool during forming an opinion that is formulated elsewhere. It is no longer relevant.
+
 ## Unconditionals
 
 |                   | Kafka              | RabbitMQ           | NATS               | Pulsar             | ActiveMQ           
