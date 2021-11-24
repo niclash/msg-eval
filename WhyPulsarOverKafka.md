@@ -71,6 +71,10 @@ Namespaces is a convenient separation of topic naming and security. Kafka doesn'
 
 In Pulsar, it is recommended that each bounded context (or application) has its own namespace, to avoid topic naming conflicts and not having centralized topic management.
 
+# Topic types
+Kafka only supports persistent topics, that are partitioned by default (although it may be a single partition).
+
+Pulsar can have persistent or non-persistent topics, and they can be partitioned (or not). Non-persistent, non-partitioned topics will "garbage collect" after a configurable threshold. This opens up the potential use of temporary topics, for instance to use for Request-Reply-over-Messaging pattern, which could replace HTTP Rest endpoints and in effect further secure the environment.
 
 ## Security
 Kafka's security is relatively simple, mostly due to the abstraction being much simpler, and wasn't designed with security as a first-class citizen.
@@ -99,6 +103,11 @@ Pulsar's design with Bookkeeper makes it much more cloud-friendly, although _I_ 
 Kafka doesn't come with much tools for monitoring. Thurd-party, open source, Kowl is very rudimentary. And the idea is to use JMX. If a JMX tooling stack is already in place, that is fine. But nowadays, modern monitoring uses Grafana and more often than not set up Prometheus for metrics aggregation/database. To use Kafka with Prometheus we need to install a _JMX Exporter_ into the JVM (via the agent API), configured for all the data points (~200 or so) we want to monitor.
 
 Pulsar comes with a rudimentary management tool, but more importantly it supports Prometheus out of the box. This means easier deployment and fewer moving parts that can break.
+
+## Limitations
+Kafka slows down as the set of stored messages grow. This behavior is not present in Pulsar. And in Kafka, this escalates quickly if "rebalancing" of the brokers is required. Pulsar don't have "rebalancing" as Bookkeeper creates a distributed/resilient ledger disconnected from the Pulsar partitions, and it doesn't suffer from storage bottlenecks as data volume grows.
+
+Kafka has practical limits of "thousands of topics". Pulsar is said to be able to handle millions of topics. I also personally checked claim with people inside TenCent, one of the largest Pulsar deployments, and yes they have more topics than they care to count, including running financial transactions (WeChat Pay) over Pulsar.
 
 ## Integration
 Kafka has a very rich eco-system of integration modules. Pulsar is lacking in this respect, but https://hub.streamnative.io/ shows a decent set, and the more important ones, like MQTT, Cassandra, Flink, Spark, HDFS/Hadoop, are available and ready to use.
